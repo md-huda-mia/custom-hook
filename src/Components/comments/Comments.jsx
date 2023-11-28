@@ -3,8 +3,15 @@ import SingleCom from "../singleComm/SingleCom";
 import CustomHook from "../../custom/Hooks/CustomHook";
 
 const Comments = () => {
-  const { data } = CustomHook("https://jsonplaceholder.typicode.com/comments");
-
+  const { data, loading, error } = CustomHook(
+    "https://jsonplaceholder.typicode.com/comments"
+  );
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
   return (
     <div>
       <h3>Comments section</h3>
