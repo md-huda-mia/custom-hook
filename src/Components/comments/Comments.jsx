@@ -9,7 +9,7 @@ const Comments = () => {
 
   return (
     <div>
-      <h3>Comments section</h3>
+      <h2>All Comments</h2>
       <div className="commnets_container">
         {data?.slice(0, 10).map((comment, index) => (
           <SingleCom key={index} comment={comment} />

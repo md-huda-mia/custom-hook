@@ -1,6 +1,7 @@
 .single_post_container,
 .commnets_container,
-.photo_container {
+.photo_container,
+.post_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
