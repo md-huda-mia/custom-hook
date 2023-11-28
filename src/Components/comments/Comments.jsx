@@ -6,12 +6,7 @@ const Comments = () => {
   const { data, loading, error } = CustomHook(
     "https://jsonplaceholder.typicode.com/comments"
   );
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+
   return (
     <div>
       <h3>Comments section</h3>
