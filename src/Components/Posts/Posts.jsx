@@ -1,7 +1,7 @@
 import React from "react";
-import SinglePost from "../singlePost/singlePost";
 import CustomHook from "../../custom/Hooks/CustomHook";
 import "./Post.css";
+import Post from "../singlePost/Post";
 
 const Posts = () => {
   const { data, loading, error } = CustomHook(
@@ -20,7 +20,7 @@ const Posts = () => {
       <h2>All Posts</h2>
       <div className="single_post_container">
         {data?.slice(0, 10).map((post) => (
-          <SinglePost key={post.id} post={post} />
+          <Post key={post.id} post={post}></Post>
         ))}
       </div>
     </div>
